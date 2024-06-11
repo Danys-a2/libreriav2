@@ -2,6 +2,8 @@ package com.distribuida.entities;
 
 public class Cliente {
 	
+	//Estoy empezando a trabajar con el git y git hub
+	
 	//Atributos
 	private int idCliente;
 	private String cedula;

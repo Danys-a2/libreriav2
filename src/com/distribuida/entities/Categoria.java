@@ -1,6 +1,8 @@
 package com.distribuida.entities;
 
 public class Categoria {
+	
+	//Estoy empezando a trabajar con el git y git hub
 	private int idCategoria;
 	private String categoria;
 	private String descripcion;
