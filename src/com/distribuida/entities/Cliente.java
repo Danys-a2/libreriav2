@@ -1,5 +1,8 @@
 package com.distribuida.entities;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Cliente {
 	
 	//Estoy empezando a trabajar con el git y git hub
