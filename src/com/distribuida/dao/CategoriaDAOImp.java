@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 import com.distribuida.entities.Categoria;
 
 
-
+// anotaciones Spring Framework 
 @Repository
 public class CategoriaDAOImp implements CategoriaDAO {
 	

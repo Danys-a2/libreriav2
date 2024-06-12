@@ -9,7 +9,7 @@ import com.distribuida.entities.Autor;
 public interface AutorDAO {
 	
 	//son directivas o nombres de los métodos q sirven para ejecutar dentro CRUD básico
-		public List<Autor> findAll(); //atraer todos los datos
+		public List<Autor> findAll(); //atraer todos los datos.
 		
 		public Autor findOne(int id); //buscar un Autor
 		

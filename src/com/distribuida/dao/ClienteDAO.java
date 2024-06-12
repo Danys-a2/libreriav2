@@ -8,7 +8,7 @@ import com.distribuida.entities.Cliente;
 public interface ClienteDAO {
 	
 	//son directivas o nombres de los métodos q sirven para ejecutar dentro CRUD básico
-	public List<Cliente> findAll(); //atraer todos los datos
+	public List<Cliente> findAll(); //atraer todos los datos:
 	
 	public Cliente findOne(int id); //buscar un cliente
 	

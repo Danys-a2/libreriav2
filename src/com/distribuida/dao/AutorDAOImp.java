@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 import com.distribuida.entities.Autor;
 
 
-
+//anotaciones Spring Framework
 @Repository
 public class AutorDAOImp implements AutorDAO {
 	
