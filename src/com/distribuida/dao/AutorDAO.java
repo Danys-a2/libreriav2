@@ -4,6 +4,8 @@ import java.util.List;
 
 import com.distribuida.entities.Autor;
 
+
+
 public interface AutorDAO {
 	
 	//son directivas o nombres de los métodos q sirven para ejecutar dentro CRUD básico
