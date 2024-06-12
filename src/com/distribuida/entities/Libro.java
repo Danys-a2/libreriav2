@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Libro {
 
+	//manejo de component
 	private int idLibro;
 	private String titulo;
 	private String editorial;
