@@ -1,19 +1,39 @@
 package com.distribuida.entities;
 
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import org.springframework.stereotype.Component;
 
 @Component
+@Entity
+@Table(name = "cliente")
 public class Cliente {
 	
 	//Estoy empezando a trabajar con el git y git hub
 	
 	//Atributos
+	@Id
+	@GeneratedValue (strategy = GenerationType.IDENTITY)
+	@Column(name = "id_cliente")
 	private int idCliente;
+	@Column(name = "cedula")
 	private String cedula;
+	@Column(name = "nombre")
 	private String nombre;
+	@Column(name = "apellido")
 	private String apellido;
+	@Column(name = "direccion")
 	private String direccion;
+	@Column(name = "telefono")
 	private String telefono;
+	@Column(name = "id_correo")
 	private String correo;
 	
 	//Constructores
