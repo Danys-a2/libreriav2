@@ -2,10 +2,11 @@ package com.distribuida.entities;
 
 import java.util.Date;
 
+
 import org.springframework.stereotype.Component;
 
 
-@Component
+@Component 
 public class Factura {
 
 	private int idFactura;
@@ -17,7 +18,7 @@ public class Factura {
 	//private int idCliente;
 	private Cliente cliente;
 	
-	private Factura() { }
+	public Factura() { }
 
 	public Factura(int idFactura, String numFactura, Date fecha, double totalNeto, double iva, double total) {
 		this.idFactura = idFactura;

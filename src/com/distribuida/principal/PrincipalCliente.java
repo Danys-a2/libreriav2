@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.distribuida.dao.ClienteDAO;
-import com.distribuida.dao.ClienteDAOImp;
+
 import com.distribuida.entities.Cliente;
 
 public class PrincipalCliente {

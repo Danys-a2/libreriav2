@@ -1,6 +1,6 @@
 package com.distribuida.entities;
 
-import java.util.Date;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -33,7 +33,7 @@ public class Cliente {
 	private String direccion;
 	@Column(name = "telefono")
 	private String telefono;
-	@Column(name = "id_correo")
+	@Column(name = "correo")
 	private String correo;
 	
 	//Constructores

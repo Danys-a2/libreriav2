@@ -1,5 +1,6 @@
 package com.distribuida.entities;
 
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,8 +17,8 @@ public class Categoria {
 	
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
-	@Column(name = "id_categoria")
 	//Estoy empezando a trabajar con el git y git hub
+	@Column(name = "id_categoria")
 	private int idCategoria;
 	@Column(name = "categoria")
 	private String categoria;
