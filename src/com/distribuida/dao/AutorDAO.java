@@ -18,6 +18,8 @@ public interface AutorDAO {
 		public void up();                //actualizar un Autor
 		
 		public void del(int id);         //borrar un Autor
+
+		void up(Autor autor);
 		
 		//CRUD avanzados
 

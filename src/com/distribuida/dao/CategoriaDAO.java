@@ -17,6 +17,8 @@ public interface CategoriaDAO {
 			public void up();                //actualizar un Categoria
 			
 			public void del(int id);         //borrar un Categoria
+
+			void up(Categoria categoria);
 			
 			//CRUD avanzados
 

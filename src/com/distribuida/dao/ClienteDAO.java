@@ -17,6 +17,8 @@ public interface ClienteDAO {
 	public void up();                //actualizar un cliente
 	
 	public void del(int id);         //borrar un cliente
+
+	void up(Cliente cliente);
 	
 	//CRUD avanzados
 	

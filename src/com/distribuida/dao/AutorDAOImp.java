@@ -8,7 +8,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
+import org.hibernate.query.Query;
 import com.distribuida.entities.Autor;
 
 
@@ -16,11 +16,28 @@ import com.distribuida.entities.Autor;
 @Repository
 public class AutorDAOImp implements AutorDAO {
 	
-	// SELECT * FROM Autor; ----------> SQL 
-		// " from Autor"   ---------------> HQL
-		
-		// SELECT au * FROM autor as au; ------> SQL 	 
-		// SELECT au FROM Autor au -------------> HQL 
+	//************** HQL*******************************
+	// find All
+	// SELECT au FROM Autor au;  // FROM Autor;
+	
+	// findOne
+	// SELECT au FROM Autor au WHERE au.idAutor=: KeyIdAutor; 
+	
+	// add 
+	// INSERT INTO Autor (....) VALUES (......) ???? NO ES EJECUTABLE EN HQL
+	// INSERT INTO Autor (....) SELECT (......) ???? SI ES EJECUTABLE EN HQL
+	
+	// UP
+	// UPDATE Autor SET au.nombre =: keyNombre, 
+	//                  au.apellido =: keyApellido, 
+	//                  au.pais =: keyPais
+	//                  au.direccion =: keyDireccion,
+	//                  au.telefono =: kayTelefono,
+	//                  au.correo =: keyCorreo,
+	//           WHERE au.idAutor = keyIdAutor;
+	
+	// del
+	// DELETE FROM Autor au WHERE au.idAutor =: KeyIdAutor;
 		
 		@Autowired
 		private SessionFactory sessionFactory;
@@ -30,31 +47,67 @@ public class AutorDAOImp implements AutorDAO {
 	public List<Autor> findAll() {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
-		return session.createQuery(" from Autor", Autor.class).getResultList();
+		return session.createQuery("SELECT au FROM Autor au", Autor.class).getResultList();
 	}
 
 	@Override
+	@Transactional
 	public Autor findOne(int id) {
 		// TODO Auto-generated method stub
-		return null;
+		Session session = sessionFactory.getCurrentSession();
+		Query query = session.createQuery("SELECT au FROM Autor au WHERE au.idAutor=: KeyIdAutor");
+		query.setParameter("KeyIdAutor", id);
+		return (Autor) query.getSingleResult();
 	}
 
 	@Override
+	@Transactional
 	public void add(Autor autor) {
 		// TODO Auto-generated method stub
+		Session session = sessionFactory.getCurrentSession();
+		session.saveOrUpdate(autor);
+
+	}
+
+	@Override
+	@Transactional
+	public void up(Autor autor) {
+		// TODO Auto-generated method stub
+		Session session = sessionFactory.getCurrentSession();
+		Query query = session.createQuery("UPDATE Autor au SET au.nombre =: keyNombre "
+				+", au.apellido =: keyApellido "
+				+", au.pais =: keyPais "
+				+", au.direccion =: keyDireccion "
+				+", au.telefono =: keyTelefono "
+				+", au.correo =: keyCorreo "
+				+ " WHERE au.idAutor =: keyIdAutor ");
+		query.setParameter("keyNombre", autor.getNombre());
+		query.setParameter("keyApellido", autor.getApellido());
+		query.setParameter("keyPais", autor.getPais());
+		query.setParameter("keyDireccion", autor.getDireccion());
+		query.setParameter("keyTelefono", autor.getTelefono());
+		query.setParameter("keyCorreo", autor.getCorreo());
+		query.setParameter("keyIdAutor", autor.getIdAutor());
+		
+		query.executeUpdate();
+
+	}
+
+	@Override
+	@Transactional
+	public void del(int id) {
+		// TODO Auto-generated method stub
+		Session session = sessionFactory.getCurrentSession();
+		Query query = session.createQuery("DELETE FROM Autor au WHERE au.idAutor =: KeyIdAutor");
+		query.setParameter("KeyIdAutor", id);		
+		query.executeUpdate();
 
 	}
 
 	@Override
 	public void up() {
 		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void del(int id) {
-		// TODO Auto-generated method stub
-
+		
 	}
 
 }
