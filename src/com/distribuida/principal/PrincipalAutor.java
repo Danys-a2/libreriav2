@@ -30,7 +30,8 @@ public class PrincipalAutor {
 		//System.out.println("****************DEL***************"+autorDAO.findOne(1));				
 		// find All				
 		autorDAO.findAll().forEach(item -> {System.out.println(item.toString()); });
-						
+				
+		
 		context.close();
 			
 		
