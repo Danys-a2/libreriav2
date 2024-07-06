@@ -46,7 +46,7 @@ public class PrincipalFacturaDetalle {
 		});	
 		
 		
-		
+		// no ejecuta salen errores a partir de la creación de las dos últimas clases.
 		// Cerrar el contexto de Spring
 		context.close();
 	}

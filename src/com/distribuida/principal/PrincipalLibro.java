@@ -50,6 +50,8 @@ public class PrincipalLibro {
 		});	
 		
 		
+		
+		// No ejecuta
 		// Cerrar el contexto de Spring
 		context.close();
 	}
