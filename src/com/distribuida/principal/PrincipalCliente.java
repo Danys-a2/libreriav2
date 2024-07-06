@@ -26,7 +26,7 @@ public class PrincipalCliente {
 		// up
 		Cliente cliente2 = new Cliente(1, "1759638652","juan2","taipe2","av. por ahi y mas alla.2","099863252","jtaipe2@correo.com");
 		clienteDAO.up(cliente2);		
-		// del
+		// del 
 		//clienteDAO.del(1);
 		//findOne
 		//System.out.println("****************DEL***************"+clienteDAO.findOne(1));

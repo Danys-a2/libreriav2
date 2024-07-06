@@ -28,7 +28,7 @@ public class PrincipalFactura {
 		factura2.setCliente(clienteDAO.findOne(3));
 		//facturaDAO.up(factura2);		
 		// del
-		facturaDAO.del(86);
+		facturaDAO.del(86); 
 		//findOne
 		try { System.out.println("**************DEL*****************"+ facturaDAO.findOne(86));} catch(Exception e) {e.printStackTrace();}
 		// findAll

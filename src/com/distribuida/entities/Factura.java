@@ -42,11 +42,11 @@ public class Factura {
 	private double total;
 	//private int idCliente;
 	
-	@JoinColumn(name="id_cliente" )
+	@JoinColumn(name="id_cliente")
 	@ManyToOne(cascade = { CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
 	private Cliente cliente;
 	
-	public Factura() { }
+	public Factura( ) { }
 
 	public Factura(int idFactura, String numFactura, Date fecha, double totalNeto, double iva, double total) {
 		this.idFactura = idFactura;

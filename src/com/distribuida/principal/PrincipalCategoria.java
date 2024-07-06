@@ -9,7 +9,7 @@ import com.distribuida.entities.Categoria;
 
 public class PrincipalCategoria {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) { 
 		// TODO Auto-generated method stub
 
 		// Patron IoC Inversion de Control

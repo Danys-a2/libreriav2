@@ -47,7 +47,7 @@ public class Autor {
 	}
 
 	public int getIdAutor() {
-		return idAutor;
+		return idAutor; 
 	}
 
 	public void setIdAutor(int idAutor) {
