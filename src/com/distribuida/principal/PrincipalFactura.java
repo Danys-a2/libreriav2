@@ -24,11 +24,11 @@ public class PrincipalFactura {
 		factura.setCliente(clienteDAO.findOne(2));
 		//facturaDAO.add(factura);
 		// up
-		Factura factura2 = new Factura(86, "FAC-000702",new Date(), 20.362, 5.22, 26.352); 
-		factura2.setCliente(clienteDAO.findOne(3));
-		//facturaDAO.up(factura2);		
+		Factura factura2 = new Factura(36, "FAC-000702",new Date(), 20.362, 5.22, 26.352); 
+		factura2.setCliente(clienteDAO.findOne(36));
+		facturaDAO.up(factura2);		
 		// del
-		facturaDAO.del(86); 
+		//facturaDAO.del(83); 
 		//findOne
 		try { System.out.println("**************DEL*****************"+ facturaDAO.findOne(86));} catch(Exception e) {e.printStackTrace();}
 		// findAll

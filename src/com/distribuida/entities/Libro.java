@@ -64,7 +64,9 @@ public class Libro {
 	@ManyToOne(cascade = { CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
 	private Autor autor;   // private int id_autor;
 	
-	public Libro(int i, String string, Date date, double d, double e, double f) {}
+	public Libro() {
+		// Constructor por defecto
+	} 
 
 	public Libro(int idLibro, String titulo, String editorial, int numPaginas, String edicion, String idioma,
 			Date fechaPublicacion, String descripcion, String tipoPasta, String iSBN, int numEjemplares, String portada,
@@ -218,14 +220,13 @@ public class Libro {
 	}
 
 	@Override
-	public String toString() {
-		return "Libro [idLibro=" + idLibro + ", titulo=" + titulo + ", editorial=" + editorial + ", numPaginas="
-				+ numPaginas + ", edicion=" + edicion + ", idioma=" + idioma + ", fechaPublicacion=" + fechaPublicacion
-				+ ", descripcion=" + descripcion + ", tipoPasta=" + tipoPasta + ", iSBN=" + iSBN + ", numEjemplares="
-				+ numEjemplares + ", portada=" + portada + ", presentacion=" + presentacion + ", precio=" + precio
-				+ ", categoria=" + categoria + ", autor=" + autor + "]";
-	}
-	
+    public String toString() {
+        return "Libro [idLibro=" + idLibro + ", titulo=" + titulo + ", editorial=" + editorial + ", numPaginas="
+                + numPaginas + ", edicion=" + edicion + ", idioma=" + idioma + ", fechaPublicacion=" + fechaPublicacion
+                + ", descripcion=" + descripcion + ", tipoPasta=" + tipoPasta + ", iSBN=" + iSBN + ", numEjemplares="
+                + numEjemplares + ", portada=" + portada + ", presentacion=" + presentacion + ", precio=" + precio
+                + ", categoria=" + categoria + ", autor=" + autor + "]";
+    }
 	
 	
 	
