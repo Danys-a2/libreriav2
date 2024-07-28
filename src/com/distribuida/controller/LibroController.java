@@ -15,8 +15,8 @@ import com.distribuida.dao.CategoriaDAO;
 import com.distribuida.dao.LibroDAO;
 import com.distribuida.entities.Libro;
 
-@Controller
-@RequestMapping("/libros")
+@Controller // Anotación que indica la clase
+@RequestMapping("/libros") // Define la URL
 public class LibroController {
 
 	
@@ -30,7 +30,7 @@ public class LibroController {
 	private CategoriaDAO categoriaDAO;
 	
 	//Metodos	
-	@GetMapping("/findAll")
+	@GetMapping("/findAll") //Mapean solicitudes HTTP
 	private String findAll(ModelMap modelMap) {
 		
 		List<Libro> libros = libroDAO.findAll();		
