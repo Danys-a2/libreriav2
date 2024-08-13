@@ -21,7 +21,7 @@ import com.distribuida.entities.Libro;
 @RequestMapping("/libros") // Define la URL
 public class LibroController {
 
-	
+	//libroController
 	@Autowired
 	private LibroDAO libroDAO;
 	
